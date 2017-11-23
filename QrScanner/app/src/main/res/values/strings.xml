@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">QrScanner</string>
+    <string name="qr_hint">Hover to QR-code</string>
+</resources>

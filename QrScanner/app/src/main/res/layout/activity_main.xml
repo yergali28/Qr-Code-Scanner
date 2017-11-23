@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_bg"
+    tools:context="kz.zhakhanyergali.qrscanner.Activity.MainActivity">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/lightButton"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:onClick="mainActivityOnClickEvents"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ic_flash_on"
+            android:scaleType="centerCrop" />
+
+        <kz.zhakhanyergali.qrscanner.CustomWidgets.CustomTextView
+            android:id="@+id/titleActionBar"
+            android:text="Main"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@+id/lightButton"
+            android:layout_toStartOf="@+id/historyButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/historyButton"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:onClick="mainActivityOnClickEvents"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ic_history"
+            android:scaleType="centerCrop" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/long_item_divider_without_margin"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:minHeight="32dp"
+        android:layout_height="wrap_content">
+
+        <kz.zhakhanyergali.qrscanner.CustomWidgets.CustomTextView
+            android:text="@string/qr_hint"
+            android:textStyle="normal"
+            android:textColor="@android:color/black"
+            android:textAlignment="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textSize="17sp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

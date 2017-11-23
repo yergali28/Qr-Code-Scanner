@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgOfDialog"
+        android:src="@drawable/ic_done_gr"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <kz.zhakhanyergali.qrscanner.CustomWidgets.CustomTextView
+        android:id="@+id/someText"
+        android:text="Some text"
+        android:layout_margin="10sp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2sp"
+        android:background="@android:color/black"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <kz.zhakhanyergali.qrscanner.CustomWidgets.CustomButton
+            android:id="@+id/searchButton"
+            android:text="Search"
+            android:textStyle="normal"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textColor="@color/orange"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="48dp" />
+
+        <kz.zhakhanyergali.qrscanner.CustomWidgets.CustomButton
+            android:id="@+id/copyButton"
+            android:text="Copy"
+            android:textStyle="normal"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textColor="@color/orange"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="48dp" />
+
+        <kz.zhakhanyergali.qrscanner.CustomWidgets.CustomButton
+            android:id="@+id/shareButton"
+            android:text="Share"
+            android:textStyle="normal"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textColor="@color/orange"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
