@@ -98,7 +98,13 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         webSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com/#q=" + rawResult.getText()));
+                String url;
+                if(Patterns.WEB_URL.matcher(rawResult.getText()).matches()) {
+                    url = rawResult.getText();
+                }else {
+                    url = "http://www.google.com/#q=" + rawResult.getText();
+                }
+                Intent intent= new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 startActivity(intent);
                 dialog.dismiss();
                 mScannerView.resumeCameraPreview(MainActivity.this);

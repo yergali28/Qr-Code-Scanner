@@ -53,7 +53,13 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
         holder.search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com/#q=" + historyList.get(position).getContext()));
+                String url;
+                if(Patterns.WEB_URL.matcher(historyList.get(position).getContext()).matches()) {
+                    url = historyList.get(position).getContext();
+                }else {
+                    url = "http://www.google.com/#q=" + historyList.get(position).getContext();
+                }
+                Intent intent= new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 context.startActivity(intent);
             }
         });
